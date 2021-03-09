@@ -14,7 +14,7 @@ const Home = (props) => {
     <h1>Seja Bem vindo</h1>
 
       
-      <CardImg  top  width="5%"  src={require('../../assets/img/nova-trilha-logo.png')} alt="Card image cap" />
+      <CardImg  top  width="5%"  src={require('../../assets/img/nova-trilha-logo2.png')} alt="Card image cap" />
 
     </View>
   );
@@ -30,6 +30,6 @@ const estilos = StyleSheet.create({
         //FlexDirectin: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#2c3e50'
+        backgroundColor: '#5bc0de'
     }   
 })   
