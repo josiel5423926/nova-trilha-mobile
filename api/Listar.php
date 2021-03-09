@@ -2,7 +2,7 @@
 
 <?php
 
-$query = $pdo->query("select * from produto");
+$query = $pdo->query("select * from vagas");
 
 
 $res = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -11,12 +11,12 @@ for ($i=0; $i < count($res); $i++) {
  foreach ($res[$i] as $key => $value) {
  }
     $dados[] = array(
-        'idproduto' => $res[$i]['idproduto'],
-        'categoria' => $res[$i]['categoria'],
+        'id' => $res[$i]['id'],
+        'vaga' => $res[$i]['vaga'],
        'descricao' => $res[$i]['descricao'],
-       'preco' => $res[$i]['preco'],
-       'preco_final' => $res[$i]['preco_final'],
-       'imagem' => $res[$i]['imagem'],   
+       'empregador' => $res[$i]['empregador'],
+       'localizacao' => $res[$i]['localizacao'],
+       'salario' => $res[$i]['salario'],   
    
     );
 

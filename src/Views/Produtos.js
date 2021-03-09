@@ -2,35 +2,35 @@
 import React,{useState, useEffect}  from 'react';
 import {  Button,ScrollView, Text, View  } from 'react-native';
 import axios from 'axios'; // npm i axios 
-import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle
-} from 'reactstrap';
+import {Card, CardImg, CardText, CardBody,CardTitle, CardSubtitle} from 'reactstrap';
 
 
 
 import TextCenter from "../components/TextCenter";
 
 const Produtos = (props) => {
-
+ 
 
   const [lista, setLista] = useState([]);
-  const [categoria, setCategoria] = useState('');
+  const [id, setId] = useState('');
+  const [vaga, setVaga] = useState('');
   const [descricao, setDescricao] = useState('');
-  const [preco, setPreco] = useState('');
-  const [preco_final, setPreco_final] = useState('');
-  const [imagem, setImagem] = useState('');
-  const [idproduto, setIdproduto] = useState('');
+  const [empregador, setEmpregador] = useState('');
+  const [localizacao, setLocalizacao] = useState('');
+  const [salario, setSalario] = useState('');
+  
 
   useEffect(()=>{
     ListarDados();
   },[])
   
   async function ListarDados(){
-    const res = await axios.get('http://localhost/teste/api/Listar.php');
+    const res = await axios.get('http://localhost/nova-trilha-mobile/api/Listar.php');
     setLista(res.data.result);
     console.log(res.data.result);
   }
+
+
   return (
    
     <ScrollView>
@@ -38,60 +38,37 @@ const Produtos = (props) => {
     FlexDirectin: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    margin: 420,
-    width: 200  
+    margin: 500,
+    width: 500  
     
     
     }} > 
-  
 
-     <div className="container fluid "  > 
-        <h2>Lista de Produtos</h2>
+
+     <div className="container d-block "  > 
+        <h2>Vagas</h2>
         
-         
-      <Card className="text-center px-2">
-  
-            
-        <CardImg top width="100%" src={require('../../assets/img/honda_3.jpg')} alt="Card image cap" />
-        <CardBody>
-          <CardTitle tag="h2">Honda</CardTitle>
-          <CardSubtitle tag="h3" className="mb-2 text-muted">CG 160 KS</CardSubtitle>
-
-          <CardText style={{ color:'red'}}><del>R$ 88,000.00</del></CardText>
-          <CardText>R$ 79,000.00</CardText>
-          <Button
-               
-                  title="Comprar"
-                  color="#2196F3"
-                  accessibilityLabel="Learn more about this purple button"
-                />
-                <hr></hr>
-        </CardBody>
-        
-      </Card>
-       
-
+    
       
-      <Card className="text-center px-2"  >
+      <Card >
       {lista.map(item =>(
-                <React.Fragment key={item.idproduto}>
              
-        <CardImg top width="50%" src={require('../../assets/img/Kawasaki_1.jpg')} alt="Card image cap" />{item.imagem}
         <CardBody>
-          <CardTitle tag="h2">{item.categoria}</CardTitle>
-          <CardSubtitle tag="h3" className="mb-2 text-muted">{item.descricao}</CardSubtitle>
+          <CardTitle  tag="h2"  key={item.id}>{item.vaga}</CardTitle>
 
-          <CardText style={{ color:'red'}}><del>R$ {item.preco}</del></CardText>
-          <CardText>R$ {item.preco_final}</CardText>
+          <CardText >{item.descricao}</CardText>
+          <CardText >{item.empregador}</CardText>
+          <CardText> {item.localizacao}</CardText>
+          <CardText>R$ {item.salario}</CardText>
           <Button
                
-                  title="Comprar"
+                  title="Cadastre-se"
                   color="#2196F3"
                   accessibilityLabel="Learn more about this purple button"
                 />
         </CardBody>
-        <hr></hr>
-        </React.Fragment> 
+      /*   <hr></hr> */
+    
         ))}
       </Card>
       
@@ -103,7 +80,7 @@ const Produtos = (props) => {
   </View>
     
 </ScrollView>
-  
+
   );
 };
 

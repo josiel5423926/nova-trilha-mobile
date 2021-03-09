@@ -8,7 +8,7 @@ header('Content-Type: application/json; charset=utf-8');
 
 
 //dados do banco no servidor local
-$banco = 'fullstackmotos';
+$banco = 'nova-trilha';
 $host = 'localhost';
 $usuario = 'admin';
 $senha = '1234';
@@ -24,3 +24,4 @@ try {
 }
 
  ?>
+

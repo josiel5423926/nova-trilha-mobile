@@ -9,7 +9,7 @@ import {CardImg} from 'reactstrap';
 
 
 
-import Button from '../components/Button'
+/* import Button from '../components/Button' */
 
 const Login = (props) => {
   return (
@@ -17,7 +17,7 @@ const Login = (props) => {
       <View style={estilos.container} >
       
      
-     <CardImg  top ="" width="5%"  src={require('../../assets/logo.png')} alt="Card image cap" />
+     <CardImg  className="mw-auto h-50 p-5"  src={require('../../assets/img/nova-trilha-logo2.png')} alt="Card image cap" />
   
      <TextInput 
       placeholder="Digite seu email"
