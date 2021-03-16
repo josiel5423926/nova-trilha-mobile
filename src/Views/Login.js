@@ -1,15 +1,10 @@
 
-import TextCenter from "../components/TextCenter";
-
+//import TextCenter from "../components/TextCenter";
 import React, {Component} from 'react';
 import { StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 import {CardImg} from 'reactstrap';
 
-
-
-
-/* import Button from '../components/Button' */
 
 const Login = (props) => {
   return (
@@ -17,7 +12,7 @@ const Login = (props) => {
       <View style={estilos.container} >
       
      
-     <CardImg  className="mw-auto h-50 p-5"  src={require('../../assets/img/nova-trilha-logo2.png')} alt="Card image cap" />
+     <CardImg  className="mw-auto  p-5"  src={require('../../assets/img/nova-trilha-logo2.png')} alt="Nova-trilha" />
   
      <TextInput 
       placeholder="Digite seu email"

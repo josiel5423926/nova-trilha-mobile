@@ -4,6 +4,7 @@ import {createAppContainer, createStackNavigatior} from 'react-navigation';
 import Login from './Login'
 import Home from './Home'
 
+
 const MainNav = createStackNavigatior(
 {
      Login:{

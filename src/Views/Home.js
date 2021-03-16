@@ -2,8 +2,9 @@ import React from "react";
 
 //import Button from "../components/Button";
 
-import {Text,  StyleSheet, View } from 'react-native'
+import {Text,  StyleSheet, View } from 'react-native';
 import {CardImg} from 'reactstrap';
+import Exemple from '../components/home';
 
 
 //import TextCenter from "../components/TextCenter";
@@ -11,11 +12,10 @@ import {CardImg} from 'reactstrap';
 const Home = (props) => {
   return (
     <View style={estilos.container}>
-    <h1>Seja Bem vindo</h1>
+    <CardImg  className="mw-auto  p-5"  src={require('../../assets/img/nova-trilha-logo2.png')} alt="Card image cap" />
 
+      <Exemple/>
       
-      <CardImg  top  width="5%"  src={require('../../assets/img/nova-trilha-logo2.png')} alt="Card image cap" />
-
     </View>
   );
 };

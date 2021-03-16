@@ -3,7 +3,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer'
 
 import Login from '../Views/Login'
 import Home from '../Views/Home'
-import Produtos from '../Views/Vagas'
+import Vagas from '../Views/Vagas'
 
 const routeDrawer = createDrawerNavigator()
 

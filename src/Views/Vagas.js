@@ -1,8 +1,8 @@
 
 import React,{useState, useEffect}  from 'react';
-import {  Button,ScrollView, Text, View  } from 'react-native';
+import {  Button,ScrollView, View  } from 'react-native';
 import axios from 'axios'; // npm i axios 
-import {Card, CardImg, CardText, CardBody,CardTitle, CardSubtitle} from 'reactstrap';
+import {Card, CardText, CardBody,CardTitle} from 'reactstrap';
 
 
 
@@ -27,7 +27,7 @@ const Vagas = (props) => {
   async function ListarDados(){
     const res = await axios.get('http://localhost/nova-trilha-mobile/api/Listar.php');
     setLista(res.data.result);
-    console.log(res.data.result);
+    /* console.log(res.data.result); */
   }
 
 
@@ -49,8 +49,8 @@ const Vagas = (props) => {
         <h2>Vagas</h2>
         
     
-      
-      <Card >
+      <div className="my-5">
+      <Card className=" text-center  my-4">
       {lista.map(item =>(
              
         <CardBody>
@@ -67,10 +67,11 @@ const Vagas = (props) => {
                   accessibilityLabel="Learn more about this purple button"
                 />
         </CardBody>
-      /*   <hr></hr> */
+      /*   <hr></hr>  */
     
         ))}
       </Card>
+      </div>
       
     </div>
      
