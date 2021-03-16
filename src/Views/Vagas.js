@@ -34,7 +34,7 @@ const Vagas = (props) => {
   return (
    
     <ScrollView>
-      <View  style={{ flex: 1, 
+      <View  /* style={{ flex: 1, 
     FlexDirectin: 'column',
     justifyContent: 'center',
     alignItems: 'center',
@@ -42,10 +42,10 @@ const Vagas = (props) => {
     width: 500  
     
     
-    }} > 
+    }}  */> 
 
 
-     <div className="container d-block "  > 
+     <div  className="container d-block text-center"  > 
         <h2>Vagas</h2>
         
     
