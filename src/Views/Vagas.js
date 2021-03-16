@@ -8,7 +8,7 @@ import {Card, CardImg, CardText, CardBody,CardTitle, CardSubtitle} from 'reactst
 
 import TextCenter from "../components/TextCenter";
 
-const Produtos = (props) => {
+const Vagas = (props) => {
  
 
   const [lista, setLista] = useState([]);
@@ -84,6 +84,6 @@ const Produtos = (props) => {
   );
 };
 
-export default Produtos;
+export default Vagas;
 
 
