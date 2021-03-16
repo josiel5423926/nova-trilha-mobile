@@ -2,7 +2,7 @@ import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 
-import Produtos from '../Views/Produtos'
+import Vagas from '../Views/Vagas'
 import Login from '../Views/Login'
 import Home from '../Views/Home'
 
@@ -18,7 +18,7 @@ const Tab = () => {
     }}>
       <routeTab.Screen name="Login" component={Login}/>
       <routeTab.Screen name="Home" component={Home}/>
-      <routeTab.Screen name="Produtos" component={Produtos}/>
+      <routeTab.Screen name="Vagas" component={Vagas}/>
     </routeTab.Navigator>
     
   )

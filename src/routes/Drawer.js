@@ -3,7 +3,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer'
 
 import Login from '../Views/Login'
 import Home from '../Views/Home'
-import Produtos from '../Views/Produtos'
+import Produtos from '../Views/Vagas'
 
 const routeDrawer = createDrawerNavigator()
 
@@ -12,7 +12,7 @@ const Drawer = () => {
     <routeDrawer.Navigator initialRouteName="Login">
       <routeDrawer.Screen name="Login" component={Login}/>
       <routeDrawer.Screen name="Home" component={Home}/>
-      <routeDrawer.Screen name="Produtos" component={Produtos}/>
+      <routeDrawer.Screen name="Vagas" component={Vagas}/>
     </routeDrawer.Navigator>
   )
 }
