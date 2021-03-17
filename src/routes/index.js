@@ -3,7 +3,6 @@ import {SafeAreaView} from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-//import Drawer from './Drawer'
 import Tab from './Tab'
 
 const Routes = () => {
@@ -12,7 +11,7 @@ const Routes = () => {
         <NavigationContainer>
             
             <Tab />
-            {/* <Drawer /> */}
+          
         </NavigationContainer>
     </SafeAreaView>
   )
